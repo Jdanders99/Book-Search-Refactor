@@ -12,4 +12,12 @@ const typeDefs = gql`
     link: String
     title: String!
   }
+  # declaring type User with it values
+  type User {
+    _id: ID
+    username: String!
+    email: String!
+    bookCount: Int
+    savedBooks: [Book]
+  }
   `;

@@ -18,4 +18,22 @@ const resolvers = {
         throw new AuthenticationError("Not logged in");
       },
     },
+    Mutation: {
+        login: async (parent, { email, password }) => {
+          const user = await User.findOne({ email });
+          // checking if user exists with email and credentials
+          if (!user) {
+            //   if not throw an error
+            throw new AuthenticationError("Invalid credentials");
+          }
+    
+          const correctPassword = await user.isCorrectPassword(password);
+          if (!correctPassword) {
+            throw new AuthenticationError("Invalid credentials");
+          }
+          const token = signToken(user);
+    
+          return { token, user };
+        },
+    }
 }

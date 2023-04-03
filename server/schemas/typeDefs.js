@@ -25,4 +25,13 @@ const typeDefs = gql`
     token: ID!
     user: User
   }
+  # declaring Save book input with it values
+  input SavedBookInput {
+    authors: [String]
+    title: String
+    description: String
+    bookId: String
+    image: String
+    link: String
+  }
   `;

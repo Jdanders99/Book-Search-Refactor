@@ -30,5 +30,5 @@ The following readme uses a MIT license:
 [For more information](https://choosealicense.com/licenses/mit/)  
 
 **Added for submission**  
-GitHub Repo: https://github.com/Jdanders99/text-editor-pwa
-Deployed on Heroku: https://shrouded-stream-22130.herokuapp.com/
+GitHub Repo: https://github.com/Jdanders99/Book-Search-Refactor
+Deployed on Heroku:

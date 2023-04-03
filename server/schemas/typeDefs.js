@@ -20,4 +20,9 @@ const typeDefs = gql`
     bookCount: Int
     savedBooks: [Book]
   }
+  # declaring type Auth with it values
+  type Auth {
+    token: ID!
+    user: User
+  }
   `;

@@ -2,6 +2,11 @@ const express = require('express');
 const path = require('path');
 const db = require('./config/connection');
 const routes = require('./routes');
+const User = require('./models/User');
+const Auth = require('./utils/auth');
+
+const { typeDefs, resolvers } = require('./schemas');
+const db = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3001;

@@ -34,4 +34,8 @@ const typeDefs = gql`
     image: String
     link: String
   }
+  # declaring me to the user
+  type Query {
+    me: User
+  }
   `;
